@@ -7,11 +7,11 @@ const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
   const chunksRef = useRef<Blob[]>([]);
-  const timerRef = useRef<NodeJs.Timeout | null>(null);
+  const timerRef = useRef<number | null>(null);
   const recordingIdRef = useRef<string>("");
 
   const navigateTo = (
-    page: "home" | "part1" | "part2" | "part3" | "summary",
+    page: "home" | "part1" | "part2" | "part3" | "summary" | "practice",
   ) => {
     setState((prev) => ({ ...prev, currentPage: page }));
   };

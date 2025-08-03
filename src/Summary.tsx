@@ -1,5 +1,6 @@
 import { Home, RotateCcw, Trophy } from "lucide-react";
 import AudioPlayer from "./AudioPlayer";
+import { useAppContext } from "./AppContext";
 
 const Summary: React.FC = () => {
   const { recordings, reset, navigateTo } = useAppContext();

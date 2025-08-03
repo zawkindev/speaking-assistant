@@ -23,7 +23,7 @@ const Part3: React.FC = () => {
       }, 1000);
       return () => clearTimeout(timer);
     }
-  }, [currentQuestion, mode]);
+  }, [currentQuestion, mode, isRecording, startRecording]);
 
   const handleNext = () => {
     if (currentQuestion < questions.length - 1) {

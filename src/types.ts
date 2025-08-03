@@ -6,7 +6,7 @@ export interface Recording {
 }
 
 export interface AppState {
-  currentPage: "home" | "part1" | "part2" | "part3" | "summary";
+  currentPage: "home" | "part1" | "part2" | "part3" | "summary" | "practice";
   mode: "practice" | "mock" | null;
   recordings: { [key: string]: Recording };
   currentPart: number;
@@ -18,7 +18,9 @@ export interface AppState {
 }
 
 export interface AppContextType extends AppState {
-  navigateTo: (page: "home" | "part1" | "part2" | "part3" | "summary") => void;
+  navigateTo: (
+    page: "home" | "part1" | "part2" | "part3" | "summary" | "practice",
+  ) => void;
   setMode: (mode: "practice" | "mock") => void;
   startRecording: (id: string) => void;
   stopRecording: () => void;

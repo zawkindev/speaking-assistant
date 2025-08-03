@@ -1,6 +1,5 @@
 import React from "react";
 import Summary from "./Summary";
-import type { AppState, Recording } from "./types";
 import { useAppContext } from "./AppContext";
 import ModeSelect from "./ModeSelect";
 import Part1 from "./Part1";
